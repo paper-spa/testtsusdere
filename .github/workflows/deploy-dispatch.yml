@@ -1,0 +1,13 @@
+name: Deploying on dispatch
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: mona/lisa
+    steps:
+      - run: |
+          echo "deploying ${GITHUB_REF_NAME}"
